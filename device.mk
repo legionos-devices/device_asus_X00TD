@@ -100,12 +100,15 @@ PRODUCT_PACKAGES += \
     libhdmiedid \
     libhfp
 
+# for HIDL related packages
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
     android.hardware.audio@2.0-impl \
     android.hardware.audio.effect@2.0-impl \
-    android.hardware.audio.common@2.0-util \
-    android.hardware.soundtrigger@2.1-impl \
+    android.hardware.soundtrigger@2.1-impl
+
+# enable audio hidl hal 6.0
+PRODUCT_PACKAGES += \
     android.hardware.audio@6.0 \
     android.hardware.audio.common@6.0 \
     android.hardware.audio.common@6.0-util \
@@ -527,7 +530,7 @@ PRODUCT_COPY_FILES += \
 
 
 # Zen Parts
-#PRODUCT_PACKAGES += \
-#     ZenParts
+PRODUCT_PACKAGES += \
+     ZenParts
 
 $(call inherit-product, vendor/asus/X00T/X00T-vendor.mk)
