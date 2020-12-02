@@ -28,6 +28,9 @@ TARGET_BOOT_ANIMATION_RES := 1080
 # Gapps Config
 TARGET_GAPPS_ARCH := arm64
 
+# Google Recorder
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+
 # Inherit from X00T device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
