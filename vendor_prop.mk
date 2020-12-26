@@ -10,6 +10,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.hw.binder.size_kbyte=1024 \
     persist.vendor.audio.hifi.int_codec=true \
     persist.vendor.audio.ras.enabled=false \
+    vendor.audio.feature.compr_voip.enable=false \
     ro.af.client_heap_size_kbyte=7168 \
     ro.config.media_vol_default=9 \
     ro.config.media_vol_steps=25 \
