@@ -411,6 +411,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc \
+    init.safailnet.rc \
     init.spectrum.rc \
     init.spectrum.sh \
     init.parallax.rc \
