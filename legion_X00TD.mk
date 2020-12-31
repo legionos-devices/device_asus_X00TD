@@ -19,15 +19,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit some common Corvus stuff
-$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
+# Inherit some common legion stuff
+$(call inherit-product, vendor/legion/config/common_full_phone.mk)
 
 # Poduct spec
 TARGET_INCLUDE_WIFI_EXT := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_BOOT_ANIMATION_RES := 1080
 IS_PHONE := true
-scr_resolution := 1080
+
+# Official
+LEGION_BUILD_TYPE := OFFICIAL
 
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -35,7 +37,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := X00TD
 PRODUCT_MANUFACTURER := asus
-PRODUCT_NAME := corvus_X00TD
+PRODUCT_NAME := legion_X00TD
 PRODUCT_MODEL := ASUS_X00T
 
 PRODUCT_BUILD_PROP_OVERRIDES += \

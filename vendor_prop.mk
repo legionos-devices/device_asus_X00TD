@@ -216,5 +216,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.corvus.maintainer=pkm774
+    ro.maintainer.name=pkm774
 
