@@ -1215,7 +1215,7 @@ vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
 # Radio - from cmi RKQ1.200710.002-V12.1.2.0.RJACNXM
-system_ext/framework/qti-telephony-common.jar|98951c48563c5846a58c9a3c4c254f32d0741f36
+system_ext/framework/qti-telephony-common.jar|96154b2576114dd566bbc99a2d9af612de8849df
 
 # Radio - from LA.UM.8.2.r1-06700-sdm660.0
 -product/app/QtiTelephonyService/QtiTelephonyService.apk|9758fbbaa7b2a18c01a32200b3a86a4dbc798d3c
