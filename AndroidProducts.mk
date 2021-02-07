@@ -15,7 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/cherish_X00TD.mk
+    $(LOCAL_DIR)/legion_X00TD.mk
 
 COMMON_LUNCH_CHOICES := \
-    cherish_X00TD-userdebug \
+    legion_X00TD-userdebug \
