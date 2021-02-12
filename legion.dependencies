@@ -1,13 +1,13 @@
 [
   {
     "remote":"github",
-    "branch":"eleven",
-    "repository": "dhimanparas20/kernel_asus_sdm660",
+    "branch":"ten",
+    "repository": "pkm774/kernel_asus_sdm660",
     "target_path": "kernel/asus/sdm660"
   },
   {
     "remote":"github",
-    "branch":"eleven",
+    "branch":"11",
     "repository": "dhimanparas20/vendor_asus",
     "target_path": "vendor/asus"
   }
