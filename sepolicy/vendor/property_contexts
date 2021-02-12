@@ -29,4 +29,6 @@ wifi.active.interface               u:object_r:exported_wifi_prop:s0
 persist.zenparts.gpu_profile           u:object_r:boosts_prop:s0
 persist.zenparts.cpu_profile           u:object_r:boosts_prop:s0
 
+# Dirac
+persist.audio.dirac                           u:object_r:dirac_prop:s0
 
