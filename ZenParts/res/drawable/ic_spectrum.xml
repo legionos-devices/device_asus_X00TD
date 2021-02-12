@@ -1,10 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- drawable/flash_outline.xml -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:height="24dp"
     android:width="24dp"
     android:viewportWidth="24"
     android:viewportHeight="24"
     android:tint="?android:attr/colorControlNormal">
-   <path
-        android:fillColor="#000000"
-        android:pathData="M4,3H20A2,2 0 0,1 22,5V19A2,2 0 0,1 20,21H4A2,2 0 0,1 2,19V5A2,2 0 0,1 4,3M4,5V19H8V13H6.75V5H4M9,19H15V13H13.75V5H10.25V13H9V19M16,19H20V5H17.25V13H16V19Z" />
+    <path android:fillColor="#000" android:pathData="M7,2H17L13.5,9H17L10,22V14H7V2M9,4V12H12V14.66L14,11H10.24L13.76,4H9Z" />
 </vector>

@@ -24,6 +24,9 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INJECT_EVENTS"/>
     <uses-permission android:name="android.permission.CAMERA" />
+    
+    <protected-broadcast android:name="com.android.systemui.doze.pulse" />
+    <protected-broadcast android:name="com.asus.zenparts.CUST_UPDATE" />
 
     <uses-sdk android:minSdkVersion="27" />
 
@@ -39,7 +42,6 @@
             android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
@@ -91,19 +93,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
         </intent-filter>
         </activity>
-        <activity android:name="com.asus.zenparts.KeyHandler" />
-	<activity
-            android:name="com.asus.zenparts.settings.ScreenOffGestureSettings"
-			android:exported="true"
-            android:theme="@style/CustomOptionsTheme"
-            android:label="@string/screen_off_gesture_title">
-          <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-          </intent-filter>
-	</activity>
-        <service android:name="com.asus.zenparts.SensorsDozeService"
-                 android:permission="SensorsDozeService">
-        </service>
         <service
             android:name=".ZenpartsTile"
             android:enabled="true"
@@ -114,27 +103,6 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
-
-        <service
-            android:name=".CpuboostTileService"
-            android:icon="@drawable/ic_cpuboost_qs"
-            android:label="@string/cpuboost_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-
-        <service
-            android:name=".GpuboostTileService"
-            android:icon="@drawable/ic_gpuboost_qs"
-            android:label="@string/gpuboost_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-
         <service
             android:name="com.asus.zenparts.DimmerTile"
             android:icon="@drawable/ic_backlight"
@@ -145,19 +113,57 @@
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+        <service android:name="com.asus.zenparts.ambient.SensorsDozeService"
+                 android:permission="SensorsDozeService">
+        </service>
+
         <activity
-            android:name="com.asus.zenparts.TouchscreenGesturePreferenceActivity"
-			android:exported="true"
-            android:theme="@style/CustomOptionsTheme"
-            android:label="@string/ambient_display_gestures_title">
+            android:name="com.asus.zenparts.ambient.AmbientGesturePreferenceActivity"
+            android:label="@string/ambient_display_gestures_title"
+            android:icon="@drawable/ic_doze">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
         </activity>
-        <receiver android:name="com.asus.zenparts.Startup" >
-            <intent-filter android:priority="100" >
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
+        
+        <service
+            android:name=".FPSInfoService"
+            android:exported="false">
+        </service>
+        <service
+            android:name=".FPSTileService"
+            android:icon="@drawable/ic_fps_info"
+            android:label="@string/fps_info_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
-        </receiver>
+        </service>
+        
+        <service
+            android:name=".DiracService"
+            android:enabled="true"
+            android:stopWithTask="false" />
+        
+        <service
+            android:name=".DiracTileService"
+            android:icon="@drawable/dirac_qs_tile_icon"
+            android:label="@string/dirac_qs_tile_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".SpectrumTileService" 
+            android:icon="@drawable/ic_spectrum" 
+            android:label="@string/spectrum_profile_title" 
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"> 
+            <intent-filter>
+                <action 
+                android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>		
     </application>
 </manifest>
